@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- FOOTER YEAR ---
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   // --- NEW: TEXT ANIMATION LOGIC ---
   const animatedText = document.querySelector('.animate-text');
   if (animatedText) {
@@ -14,37 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- PRELOADER ---
-  const preloader = document.querySelector('.preloader');
-  window.addEventListener('load', () => {
-    preloader.classList.add('hidden');
-  });
-
-  // --- CUSTOM CURSOR ---
-  const cursorDot = document.querySelector('.cursor-dot');
-  const cursorOutline = document.querySelector('.cursor-outline');
-
-  window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-
-    cursorOutline.animate({
-        left: `${posX}px`,
-        top: `${posY}px`
-    }, { duration: 500, fill: "forwards" });
-  });
-  
-  document.addEventListener('mouseleave', () => {
-    cursorDot.classList.add('hidden');
-    cursorOutline.classList.add('hidden');
-  });
-  document.addEventListener('mouseenter', () => {
-    cursorDot.classList.remove('hidden');
-    cursorOutline.classList.remove('hidden');
-  });
+  // --- MOBILE MENU ---
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.getElementById('site-nav');
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', () => {
+      const open = siteNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+    siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      siteNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
 
   // --- SCROLL INDICATOR ---
   const scrollIndicator = document.querySelector('.scroll-indicator');
@@ -78,12 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     el.addEventListener('mouseleave', () => {
       el.style.transform = 'translate(0, 0)';
-    });
-    el.addEventListener('mouseenter', () => {
-        cursorOutline.classList.add('hover');
-    });
-    el.addEventListener('mouseleave', () => {
-        cursorOutline.classList.remove('hover');
     });
   });
 });

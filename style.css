@@ -27,7 +27,6 @@ body {
     color: var(--slate);
     font-family: var(--font-body);
     line-height: 1.6;
-    cursor: none;
 }
 
 .container {
@@ -477,75 +476,6 @@ footer {
     transform: translateY(0);
 }
 
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--dark-navy);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.preloader.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid var(--lightest-navy);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.cursor-dot,
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9998;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s, width 0.3s, height 0.3s;
-}
-
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent);
-}
-
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(100, 255, 218, 0.2);
-    transition-duration: 0s, 0s, 0.2s, 0.2s;
-}
-
-.cursor-dot.hidden,
-.cursor-outline.hidden {
-    opacity: 0;
-}
-
-.cursor-outline.hover {
-    width: 60px;
-    height: 60px;
-}
-
 .scroll-indicator {
     position: fixed;
     top: 0;
@@ -683,12 +613,138 @@ footer {
         flex-basis: auto;
     }
 
-    .cursor-dot,
-    .cursor-outline {
-        display: none;
-    }
+}
 
-    body {
-        cursor: auto;
+/* --- ROLE LINE, EDUCATION, METRICS, SKILL CHIPS, PROJECT BANNER --- */
+.hero-text .hero-role {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.edu-meta {
+    color: var(--light-slate);
+    font-size: 0.9rem;
+}
+
+.experience-details .project-tech,
+.experience-details .project-links {
+    margin-top: 15px;
+}
+
+.project-banner {
+    aspect-ratio: 16 / 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--lightest-navy), var(--dark-navy));
+    color: var(--accent);
+    font-size: 3.2rem;
+}
+
+.project-metrics {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.project-metrics li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: var(--light-slate);
+}
+
+.project-metrics li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.project-metrics strong {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.skill-groups {
+    display: grid;
+    gap: 30px;
+}
+
+.skill-group h3 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--lightest-navy);
+}
+
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-chips span {
+    background-color: var(--light-navy);
+    border: 1px solid var(--lightest-navy);
+    color: var(--light-slate);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-chips span:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+#projects .project-links {
+    margin-top: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--lightest-navy);
+    border-radius: 5px;
+    color: var(--accent);
+    font-size: 1.3rem;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
     }
+    .menu-toggle {
+        display: block;
+    }
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 15px;
+    }
+    header nav.open {
+        display: flex;
+    }
+    header nav a {
+        margin: 0;
+        padding: 12px 0;
+        font-size: 1rem;
+        border-top: 1px solid var(--lightest-navy);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { transition: none; }
 }

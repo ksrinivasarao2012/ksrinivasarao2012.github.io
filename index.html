@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kommana Srinivasa Rao - Portfolio</title>
-  
+  <title>Kommana Srinivasa Rao - AI Engineer Portfolio</title>
+  <meta name="description" content="AI Engineer building production GenAI systems: hybrid RAG, multi-agent LLM orchestration, multilingual speech. B.Tech AI &amp; Data Science, IIIT Sri City.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kommana Srinivasa Rao - AI Engineer Portfolio">
+  <meta property="og:description" content="AI Engineer building production GenAI systems: hybrid RAG, multi-agent LLM orchestration, multilingual speech.">
+  <meta property="og:url" content="https://ksrinivasarao2012.github.io/">
+  <meta property="og:image" content="https://ksrinivasarao2012.github.io/images/profile-photo.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kommana Srinivasa Rao - AI Engineer Portfolio">
+  <meta name="twitter:description" content="AI Engineer building production GenAI systems: hybrid RAG, multi-agent LLM orchestration, multilingual speech.">
+  <meta name="twitter:image" content="https://ksrinivasarao2012.github.io/images/profile-photo.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -15,13 +25,6 @@
 </head>
 <body>
 
-  <div class="preloader">
-    <div class="spinner"></div>
-  </div>
-
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-
   <div class="background-shapes">
     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
@@ -30,11 +33,13 @@
     <div class="scroll-indicator"></div>
     <div class="container">
       <a href="#" class="logo magnetic">KSR<span>.</span></a>
-      <nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <nav id="site-nav">
         <a href="#about" class="magnetic">About</a>
         <a href="#experience" class="magnetic">Experience</a>
+        <a href="#projects" class="magnetic">Projects</a>
         <a href="#skills" class="magnetic">Skills</a>
-        <a href="#projects" class="magnetic">Work</a>
+        <a href="#leadership" class="magnetic">Leadership</a>
         <a href="#contact" class="magnetic">Contact</a>
       </nav>
     </div>
@@ -45,7 +50,8 @@
       <div class="container hero-container">
         <div class="hero-text">
           <h1>Hi, I'm <span class="animate-text">Srinivasa</span></h1>
-          <p>An aspiring Data Scientist from Sri City, India, passionate about turning complex data into compelling stories and building intelligent solutions.</p>
+          <p class="hero-role">AI Engineer building GenAI systems</p>
+          <p>Hybrid RAG, multi-agent LLM orchestration and multilingual speech, built for production and checked with measured evaluation.</p>
           <a href="#contact" class="btn magnetic">Get In Touch</a>
         </div>
         <div class="hero-image magnetic">
@@ -57,16 +63,15 @@
     <section id="about" class="reveal">
       <div class="container">
         <h2>About Me</h2>
-        <p class="section-intro">Fueled by a deep fascination with technology and mathematics, my journey led me to IIIT Sri City, where I discovered my true calling in AI and Data Science. From the beginning, I have been genuinely passionate about becoming a data scientist—I thrive on solving problems, uncovering patterns, and finding actionable insights within data. My curiosity drives me to constantly learn new techniques and technologies, while my ambition motivates me to contribute to impactful projects that make a real-world difference.</p>
-        
+        <p class="section-intro">I'm an AI &amp; Data Science undergraduate at IIIT Sri City, and I build GenAI systems that are meant to run in production, not just in a notebook. My work covers hybrid RAG with enforced grounding, multi-agent LLM orchestration, and multilingual speech. I measure what I build with real evaluation sets, latency and failure-rate numbers, so every claim on this page comes with a result.</p>
+
         <div class="experience-item">
             <div class="experience-title">
                 <h3>Education</h3>
             </div>
             <div class="experience-details">
                 <ul>
-                  <li><strong>B.Tech, AI & Data Science</strong> - IIIT Sri City (2023–Present)</li>
-                  <li><strong>Intermediate (MPC)</strong> - Narayana Junior College (2021–2023)</li>
+                  <li><strong>B.Tech, Artificial Intelligence &amp; Data Science</strong> - IIIT Sri City (Aug 2023 – Present)<br><span class="edu-meta">CGPA: 9.03 / 10</span></li>
                 </ul>
             </div>
         </div>
@@ -75,105 +80,114 @@
 
     <section id="experience" class="reveal">
         <div class="container">
-            <h2>Leadership & Volunteering</h2>
+            <h2>Experience</h2>
 
             <div class="experience-item">
                 <div class="experience-title">
-                    <h3>Data Science Domain Lead</h3>
-                    <p class="experience-subtitle">IOTA Club, IIIT Sri City</p>
-                    <span class="experience-date">Sep 2025 – Present</span>
+                    <h3>AI Engineering Intern</h3>
+                    <p class="experience-subtitle">DRDO (Defence Research and Development Organisation)</p>
+                    <span class="experience-date">May 2026 – July 2026</span>
                 </div>
                 <div class="experience-details">
                     <ul>
-                      <li>Mentoring 20+ junior students in foundational and advanced Data Science projects.</li>
-                      <li>Organizing and leading workshops on Python, Data Analytics, and Machine Learning algorithms.</li>
-                      <li>Fostering a collaborative environment to encourage peer-to-peer learning and project development.</li>
+                      <li>Built a 4-agent LangGraph + Gemini system that auto-diagnosed and repaired 70% of injected pipeline failures (7/10) across 7 categories and 4 severity tiers, healing schema drift in under 3 seconds.</li>
+                      <li>Engineered a dry-run/rollback actuator and a Pydantic v2 quarantine layer that isolates bad rows instead of aborting runs: 90% throughput on dirty batches, and 9/12 runs with zero data loss.</li>
+                      <li>Shipped an 11-endpoint FastAPI control plane, a live ops dashboard, and a dual SQLite/PostgreSQL adapter for zero-change serverless deployment on Vercel.</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-title">
-                    <h3>Competitive Programming</h3>
-                    <p class="experience-subtitle">IIIT Sri City Chapter</p>
-                    <span class="experience-date">2024 - Present</span>
-                </div>
-                <div class="experience-details">
-                    <ul>
-                      <li>Actively participate in contests on platforms like CodeChef and Codeforces, achieving a 4-star rating on CodeChef.</li>
-                      <li>Consistently rank among the top 10 programmers in internal college contests.</li>
-                    </ul>
+                    <div class="project-tech"><span>Python</span><span>LangGraph</span><span>Gemini</span><span>FastAPI</span><span>Pydantic v2</span><span>PostgreSQL</span><span>SQLite</span><span>Vercel</span></div>
+                    <div class="project-links">
+                      <a href="https://enterprise-data-pipeline-orchestrat.vercel.app/" target="_blank" rel="noopener" class="magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                      <a href="https://github.com/ksrinivasarao2012/Enterprise-Data-Pipeline-Orchestration-Agent" target="_blank" rel="noopener" class="magnetic"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-banner"><i class="fa-solid fa-language"></i></div>
+            <div class="project-content">
+              <h3>Basha: Multilingual Text-to-Speech &amp; Localization Service</h3>
+              <p>A CPU-only FastAPI service that translates and narrates English into 11 languages, with swappable TTS/translation backends and a multi-voice audio-drama mode that casts a distinct voice per character.</p>
+              <ul class="project-metrics">
+                <li><strong>0.80–0.92</strong> similarity across all 11 languages at 100% success (1,012-sentence FLORES-200 set)</li>
+                <li><strong>RTF ~0.1</strong>, about 10× real-time on CPU</li>
+                <li>SHA-256 audio caching, async jobs, 45-case pytest suite, Dockerized on Render</li>
+              </ul>
+              <div class="project-tech"><span>Python</span><span>FastAPI</span><span>Edge-TTS</span><span>sentence-transformers</span><span>ffmpeg</span><span>Docker</span><span>pytest</span></div>
+              <div class="project-links">
+                <a href="https://basha-houo.onrender.com/" target="_blank" rel="noopener" class="magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="https://github.com/ksrinivasarao2012/Basha" target="_blank" rel="noopener" class="magnetic"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-banner"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div class="project-content">
+              <h3>QdrantRERANK: Dual-Stage Hybrid RAG with Enforced Grounding</h3>
+              <p>A search and answer system over 93,455 StackExchange answers (218K chunks) that combines keyword and semantic search with a Cross-Encoder re-ranker. Code-level grounding gates block generation when the retrieved evidence is insufficient.</p>
+              <ul class="project-metrics">
+                <li>Answer latency cut from <strong>~15s to 1–2s</strong></li>
+                <li>Grounding enforced in code, not left to prompting alone</li>
+                <li>Shared safety and validation layer across the web UI and API</li>
+              </ul>
+              <div class="project-tech"><span>Python</span><span>FastAPI</span><span>Qdrant</span><span>Groq</span><span>LangChain</span><span>Gradio</span><span>Docker</span></div>
+              <div class="project-links">
+                <a href="https://huggingface.co/spaces/Srinivasa12/rag-portfolio" target="_blank" rel="noopener" class="magnetic"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="https://github.com/ksrinivasarao2012/qdrant-rerank-rag" target="_blank" rel="noopener" class="magnetic"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="skills" class="reveal">
         <div class="container">
             <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                
-                <div class="skills-category-title">Programming Languages</div>
-                <div class="skill-card magnetic"><i class="devicon-python-plain"></i><p>Python</p></div>
-                <div class="skill-card magnetic"><i class="devicon-cplusplus-plain"></i><p>C++</p></div>
-                <div class="skill-card magnetic"><i class="devicon-java-plain"></i><p>Java</p></div>
-                <div class="skill-card magnetic"><i class="devicon-r-plain"></i><p>R</p></div>
-                <div class="skill-card magnetic"><i class="devicon-postgresql-plain"></i><p>SQL</p></div>
-
-                <div class="skills-category-title">Data Science & Machine Learning</div>
-                <div class="skill-card magnetic"><i class="devicon-numpy-original"></i><p>NumPy</p></div>
-                <div class="skill-card magnetic"><i class="devicon-pandas-original"></i><p>Pandas</p></div>
-                <div class="skill-card magnetic"><i class="devicon-scikitlearn-plain"></i><p>Scikit-learn</p></div>
-                <div class="skill-card magnetic"><i class="devicon-tensorflow-original"></i><p>TensorFlow</p></div>
-                
-                <div class="skills-category-title">Data Visualization & Web Apps</div>
-                <div class="skill-card magnetic"><i class="devicon-matplotlib-plain"></i><p>Matplotlib</p></div>
-                <div class="skill-card magnetic"><i class="fas fa-chart-bar"></i><p>Seaborn</p></div>
-                <div class="skill-card magnetic"><i class="fas fa-chart-pie"></i><p>Power BI</p></div>
-                <div class="skill-card magnetic"><img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.svg" alt="Streamlit" class="skill-svg"><p>Streamlit</p></div>
-
-                <div class="skills-category-title">Developer Tools & Platforms</div>
-                <div class="skill-card magnetic"><i class="devicon-git-plain"></i><p>Git</p></div>
-                <div class="skill-card magnetic"><i class="devicon-github-original"></i><p>GitHub</p></div>
-                <div class="skill-card magnetic"><i class="devicon-vscode-plain"></i><p>VS Code</p></div>
-                <div class="skill-card magnetic"><i class="devicon-jupyter-plain"></i><p>Jupyter</p></div>
-
+            <div class="skill-groups">
+                <div class="skill-group">
+                    <h3>Languages</h3>
+                    <div class="skill-chips"><span>Python</span><span>SQL</span></div>
+                </div>
+                <div class="skill-group">
+                    <h3>GenAI &amp; ML</h3>
+                    <div class="skill-chips"><span>LangGraph</span><span>LangChain</span><span>RAG</span><span>Hybrid Search Re-Ranking</span><span>Vector Databases (Qdrant, ChromaDB)</span><span>Hugging Face / sentence-transformers</span><span>Google Gemini</span><span>Groq</span><span>DeepEval</span><span>TensorFlow</span><span>Scikit-learn</span></div>
+                </div>
+                <div class="skill-group">
+                    <h3>Backend &amp; Data</h3>
+                    <div class="skill-chips"><span>FastAPI</span><span>Pydantic v2</span><span>REST APIs</span><span>PostgreSQL</span><span>SQLite</span><span>ETL</span><span>NumPy</span><span>Pandas</span></div>
+                </div>
+                <div class="skill-group">
+                    <h3>Tools &amp; Deployment</h3>
+                    <div class="skill-chips"><span>Docker</span><span>Git</span><span>Vercel</span><span>Render</span><span>LangSmith</span><span>structlog</span><span>pytest</span><span>Jupyter</span></div>
+                </div>
             </div>
-          </div>
+        </div>
     </section>
 
-    <section id="projects" class="reveal">
-      <div class="container">
-        <h2>Selected Work</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/project-1.png" alt="Bank Churn Prediction Project">
+    <section id="leadership" class="reveal">
+        <div class="container">
+            <h2>Leadership</h2>
+            <div class="experience-item">
+                <div class="experience-title">
+                    <h3>Data Science Domain Lead</h3>
+                    <p class="experience-subtitle">IOTA Club, IIIT Sri City</p>
+                    <span class="experience-date">Sep 2025 – July 2026</span>
+                </div>
+                <div class="experience-details">
+                    <ul>
+                      <li>Mentored 20+ junior students in foundational and advanced Data Science projects.</li>
+                      <li>Organized and led workshops on Python, Data Analytics, and Machine Learning algorithms.</li>
+                      <li>Fostered a collaborative environment to encourage peer-to-peer learning and project development.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="project-content">
-              <h3>Bank Customer Churn Prediction</h3>
-              <p>A web application built with Streamlit that predicts customer churn using machine learning. Features data preprocessing, model training (XGBoost), and interactive visualizations.</p>
-              <div class="project-tech"><span>Python</span><span>Streamlit</span><span>XGBoost</span></div>
-              <div class="project-links">
-                <a href="https://github.com/ksrinivasarao2012/bank-churn-prediction" target="_blank" class="magnetic"><i class="fa-brands fa-github"></i> GitHub</a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/project-2.png" alt="IPL Data Analysis Project">
-            </div>
-            <div class="project-content">
-               <h3>IPL Data Analysis Dashboard</h3>
-               <p>An interactive Power BI dashboard for analyzing historical IPL data. Includes detailed player statistics, team performance metrics, and match outcome predictions.</p>
-               <div class="project-tech"><span>Power BI</span><span>DAX</span><span>Power Query</span></div>
-               <div class="project-links">
-                 <a href="https://github.com/ksrinivasarao2012/IPL-Dashboard" target="_blank" class="magnetic"><i class="fa-brands fa-github"></i> GitHub</a>
-               </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <section id="resume" class="reveal">
@@ -194,15 +208,15 @@
         </div>
 
         <div class="social-links">
-          <a href="https://linkedin.com/in/kommanasrinivasarao" target="_blank" class="magnetic">LinkedIn</a>
-          <a href="https://github.com/ksrinivasarao2012" target="_blank" class="magnetic">GitHub</a>
+          <a href="https://linkedin.com/in/kommanasrinivasarao" target="_blank" rel="noopener" class="magnetic">LinkedIn</a>
+          <a href="https://github.com/ksrinivasarao2012" target="_blank" rel="noopener" class="magnetic">GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Designed & Built by Kommana Srinivasa Rao © 2025</p>
+    <p>Designed &amp; Built by Kommana Srinivasa Rao © <span id="year">2026</span></p>
   </footer>
 
   <script src="script.js"></script>
