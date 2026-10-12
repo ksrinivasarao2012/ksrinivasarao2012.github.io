@@ -109,7 +109,7 @@
         <h2>Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <div class="project-banner"><i class="fa-solid fa-language"></i></div>
+            <div class="project-image"><img src="images/Basha.png" alt="Basha multilingual text-to-speech web app" loading="lazy"></div>
             <div class="project-content">
               <h3>Basha: Multilingual Text-to-Speech &amp; Localization Service</h3>
               <p>A CPU-only FastAPI service that translates and narrates English into 11 languages, with swappable TTS/translation backends and a multi-voice audio-drama mode that casts a distinct voice per character.</p>
@@ -126,7 +126,7 @@
             </div>
           </div>
           <div class="project-card">
-            <div class="project-banner"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div class="project-image"><img src="images/qdrant-rerank.png" alt="QdrantRERANK hybrid RAG chat interface answering a question with sources" loading="lazy"></div>
             <div class="project-content">
               <h3>QdrantRERANK: Dual-Stage Hybrid RAG with Enforced Grounding</h3>
               <p>A search and answer system over 93,455 StackExchange answers (218K chunks) that combines keyword and semantic search with a Cross-Encoder re-ranker. Code-level grounding gates block generation when the retrieved evidence is insufficient.</p>
@@ -149,23 +149,45 @@
     <section id="skills" class="reveal">
         <div class="container">
             <h2>Technical Skills</h2>
-            <div class="skill-groups">
-                <div class="skill-group">
-                    <h3>Languages</h3>
-                    <div class="skill-chips"><span>Python</span><span>SQL</span></div>
-                </div>
-                <div class="skill-group">
-                    <h3>GenAI &amp; ML</h3>
-                    <div class="skill-chips"><span>LangGraph</span><span>LangChain</span><span>RAG</span><span>Hybrid Search Re-Ranking</span><span>Vector Databases (Qdrant, ChromaDB)</span><span>Hugging Face / sentence-transformers</span><span>Google Gemini</span><span>Groq</span><span>DeepEval</span><span>TensorFlow</span><span>Scikit-learn</span></div>
-                </div>
-                <div class="skill-group">
-                    <h3>Backend &amp; Data</h3>
-                    <div class="skill-chips"><span>FastAPI</span><span>Pydantic v2</span><span>REST APIs</span><span>PostgreSQL</span><span>SQLite</span><span>ETL</span><span>NumPy</span><span>Pandas</span></div>
-                </div>
-                <div class="skill-group">
-                    <h3>Tools &amp; Deployment</h3>
-                    <div class="skill-chips"><span>Docker</span><span>Git</span><span>Vercel</span><span>Render</span><span>LangSmith</span><span>structlog</span><span>pytest</span><span>Jupyter</span></div>
-                </div>
+            <div class="skills-grid">
+
+                <div class="skills-category-title">Languages</div>
+                <div class="skill-card magnetic"><i class="devicon-python-plain"></i><p>Python</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-database"></i><p>SQL</p></div>
+
+                <div class="skills-category-title">GenAI &amp; ML</div>
+                <div class="skill-card magnetic"><i class="fas fa-diagram-project"></i><p>LangGraph</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-link"></i><p>LangChain</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-magnifying-glass"></i><p>RAG</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-layer-group"></i><p>Hybrid Search Re-Ranking</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-cube"></i><p>Vector Databases (Qdrant, ChromaDB)</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-robot"></i><p>Hugging Face / sentence-transformers</p></div>
+                <div class="skill-card magnetic"><i class="devicon-google-plain"></i><p>Google Gemini</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-bolt"></i><p>Groq</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-vial"></i><p>DeepEval</p></div>
+                <div class="skill-card magnetic"><i class="devicon-tensorflow-original"></i><p>TensorFlow</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-gears"></i><p>Scikit-learn</p></div>
+
+                <div class="skills-category-title">Backend &amp; Data</div>
+                <div class="skill-card magnetic"><i class="devicon-fastapi-plain"></i><p>FastAPI</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-shield-halved"></i><p>Pydantic v2</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-plug"></i><p>REST APIs</p></div>
+                <div class="skill-card magnetic"><i class="devicon-postgresql-plain"></i><p>PostgreSQL</p></div>
+                <div class="skill-card magnetic"><i class="devicon-sqlite-plain"></i><p>SQLite</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-shuffle"></i><p>ETL</p></div>
+                <div class="skill-card magnetic"><i class="devicon-numpy-original"></i><p>NumPy</p></div>
+                <div class="skill-card magnetic"><i class="devicon-pandas-original"></i><p>Pandas</p></div>
+
+                <div class="skills-category-title">Tools &amp; Deployment</div>
+                <div class="skill-card magnetic"><i class="devicon-docker-plain"></i><p>Docker</p></div>
+                <div class="skill-card magnetic"><i class="devicon-git-plain"></i><p>Git</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-cloud-arrow-up"></i><p>Vercel</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-server"></i><p>Render</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-chart-line"></i><p>LangSmith</p></div>
+                <div class="skill-card magnetic"><i class="fas fa-file-lines"></i><p>structlog</p></div>
+                <div class="skill-card magnetic"><i class="devicon-pytest-plain"></i><p>pytest</p></div>
+                <div class="skill-card magnetic"><i class="devicon-jupyter-plain"></i><p>Jupyter</p></div>
+
             </div>
         </div>
     </section>

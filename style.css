@@ -249,7 +249,7 @@ nav a:hover {
 /* --- SKILLS SECTION --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 20px;
 }
 
@@ -292,6 +292,7 @@ nav a:hover {
     font-size: 0.9rem;
     color: var(--slate);
     margin-top: 15px;
+    overflow-wrap: anywhere;
 }
 
 .skill-card .skill-svg {
@@ -747,4 +748,11 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .reveal { transition: none; }
+}
+
+#projects .project-image img {
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    object-position: top;
+    filter: none;
 }
